@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Amina Bah — Portfolio</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Reset du scroll : remonte tout en haut à chaque chargement -->
+        <script>
+            history.scrollRestoration = "manual";
+            window.scrollTo(0, 0);
+        </script>
+    </head>
+    <body>
+        <!-- ░░░ NAVIGATION ░░░ -->
+        <header class="nav-wrapper">
+            <nav class="nav">
+                <a href="#hero" class="nav-logo">SM.</a>
+                <ul class="nav-links">
+                    <li><a href="#about" data-i18n="nav.about"></a></li>
+                    <li><a href="#services" data-i18n="nav.services"></a></li>
+                    <li><a href="#projects" data-i18n="nav.projects"></a></li>
+                    <li><a href="#edu" data-i18n="nav.edu"></a></li>
+                    <li><a href="#contact" data-i18n="nav.contact"></a></li>
+                </ul>
+                <button
+                    class="lang-toggle"
+                    id="langBtn"
+                    aria-label="Changer de langue"
+                >
+                    <span class="lang-icon">🌐</span>
+                    <span id="langLabel">EN</span>
+                </button>
+                <button
+                    class="hamburger"
+                    id="hamburger"
+                    aria-label="Menu"
+                    aria-expanded="false"
+                >
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- ░░░ MENU MOBILE ░░░ -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li>
+                    <a
+                        href="#about"
+                        data-i18n="nav.about"
+                        class="mobile-link"
+                    ></a>
+                </li>
+                <li>
+                    <a
+                        href="#services"
+                        data-i18n="nav.services"
+                        class="mobile-link"
+                    ></a>
+                </li>
+                <li>
+                    <a
+                        href="#projects"
+                        data-i18n="nav.projects"
+                        class="mobile-link"
+                    ></a>
+                </li>
+                <li>
+                    <a href="#edu" data-i18n="nav.edu" class="mobile-link"></a>
+                </li>
+                <li>
+                    <a
+                        href="#contact"
+                        data-i18n="nav.contact"
+                        class="mobile-link"
+                    ></a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ░░░ BOUTON RETOUR EN HAUT ░░░ -->
+        <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </button>
+
+        <main>
+            <!-- ░░░ HERO ░░░ -->
+            <section id="hero" class="hero">
+                <!-- Blobs décoratifs flottants -->
+                <div class="blob blob-coral" aria-hidden="true"></div>
+                <div class="blob blob-violet" aria-hidden="true"></div>
+                <div class="blob blob-orange" aria-hidden="true"></div>
+
+                <!-- Grille de points -->
+                <div class="dot-grid" aria-hidden="true"></div>
+
+                <div class="hero-content">
+                    <!-- Badge "disponible" animé -->
+                    <div class="availability-badge">
+                        <span class="pulse-dot"></span>
+                        <span data-i18n="hero.available"></span>
+                    </div>
+
+                    <h1 class="hero-name">
+                        Amina<br />
+                        <span class="gradient-text">Bah</span>
+                    </h1>
+
+                    <p class="hero-subtitle" data-i18n="hero.subtitle"></p>
+
+                    <!-- Compteurs / KPIs -->
+                    <div class="hero-kpis">
+                        <div class="kpi">
+                            <strong class="kpi-num">+120</strong>
+                            <span
+                                class="kpi-label"
+                                data-i18n="hero.kpi1"
+                            ></span>
+                        </div>
+                        <div class="kpi-sep"></div>
+                        <div class="kpi">
+                            <strong class="kpi-num">3 M+</strong>
+                            <span
+                                class="kpi-label"
+                                data-i18n="hero.kpi2"
+                            ></span>
+                        </div>
+                        <div class="kpi-sep"></div>
+                        <div class="kpi">
+                            <strong class="kpi-num">×4.8</strong>
+                            <span
+                                class="kpi-label"
+                                data-i18n="hero.kpi3"
+                            ></span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a
+                            href="#projects"
+                            class="btn btn-primary"
+                            data-i18n="hero.cta"
+                        ></a>
+                        <a
+                            href="#contact"
+                            class="btn btn-ghost"
+                            data-i18n="hero.contact"
+                        ></a>
+                    </div>
+                </div>
+
+                <!-- Indicateur de scroll -->
+                <div class="scroll-hint" aria-hidden="true">
+                    <span class="scroll-line"></span>
+                </div>
+            </section>
+
+            <!-- ░░░ À PROPOS ░░░ -->
+            <section id="about" class="section about">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-num">01</span>
+                        <h2 data-i18n="nav.about"></h2>
+                    </div>
+                    <div class="about-grid">
+                        <!-- Texte -->
+                        <div class="about-text">
+                            <p class="about-lead" data-i18n="about.lead"></p>
+                            <p class="about-body" data-i18n="about.body"></p>
+                        </div>
+
+                        <!-- Colonne droite -->
+                        <div class="about-aside">
+                            <!-- Fiche infos -->
+                            <div class="info-card">
+                                <div class="info-item">
+                                    <span
+                                        class="info-label"
+                                        data-i18n="about.location"
+                                    ></span>
+                                    <span data-i18n="contact.location"></span>
+                                </div>
+                                <div class="info-item">
+                                    <span
+                                        class="info-label"
+                                        data-i18n="about.phone"
+                                    ></span>
+                                    <span>+33 6 12 34 56 78</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Email</span>
+                                    <span>Amina.Bah@agencepulse.fr</span>
+                                </div>
+                                <div class="info-item">
+                                    <span
+                                        class="info-label"
+                                        data-i18n="about.languages"
+                                    ></span>
+                                    <span data-i18n="about.langVal"></span>
+                                </div>
+                            </div>
+
+                            <!-- Centres d'intérêt avec hover emoji -->
+                            <div class="interests">
+                                <span
+                                    class="interests-title"
+                                    data-i18n="about.interests"
+                                ></span>
+                                <div class="tags">
+                                    <span class="tag-interest">
+                                        <span
+                                            class="tag-label"
+                                            data-i18n="int.content"
+                                        ></span>
+                                        <span
+                                            class="tag-emoji"
+                                            aria-hidden="true"
+                                            >✍️</span
+                                        >
+                                    </span>
+                                    <span class="tag-interest">
+                                        <span
+                                            class="tag-label"
+                                            data-i18n="int.data"
+                                        ></span>
+                                        <span
+                                            class="tag-emoji"
+                                            aria-hidden="true"
+                                            >📊</span
+                                        >
+                                    </span>
+                                    <span class="tag-interest">
+                                        <span
+                                            class="tag-label"
+                                            data-i18n="int.trends"
+                                        ></span>
+                                        <span
+                                            class="tag-emoji"
+                                            aria-hidden="true"
+                                            >🚀</span
+                                        >
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ░░░ SERVICES ░░░ -->
+            <section id="services" class="section services alt-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-num">02</span>
+                        <h2 data-i18n="nav.services"></h2>
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">📱</div>
+                            <h3 data-i18n="srv.social.title"></h3>
+                            <p data-i18n="srv.social.desc"></p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🎯</div>
+                            <h3 data-i18n="srv.ads.title"></h3>
+                            <p data-i18n="srv.ads.desc"></p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">✍️</div>
+                            <h3 data-i18n="srv.content.title"></h3>
+                            <p data-i18n="srv.content.desc"></p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">📈</div>
+                            <h3 data-i18n="srv.growth.title"></h3>
+                            <p data-i18n="srv.growth.desc"></p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🤝</div>
+                            <h3 data-i18n="srv.influence.title"></h3>
+                            <p data-i18n="srv.influence.desc"></p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">📊</div>
+                            <h3 data-i18n="srv.analytics.title"></h3>
+                            <p data-i18n="srv.analytics.desc"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ░░░ PROJETS ░░░ -->
+            <section id="projects" class="section projects">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-num">03</span>
+                        <h2 data-i18n="nav.projects"></h2>
+                    </div>
+                    <div class="projects-grid">
+                        <div class="project-card project-card--featured">
+                            <div class="project-card-top">
+                                <span
+                                    class="project-tag"
+                                    data-i18n="proj.viral.tag"
+                                ></span>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <h3 data-i18n="proj.viral.title"></h3>
+                            <p data-i18n="proj.viral.desc"></p>
+                            <div class="project-kpis">
+                                <div class="pkpi">
+                                    <strong>+2.4M</strong
+                                    ><span data-i18n="pkpi.reach"></span>
+                                </div>
+                                <div class="pkpi">
+                                    <strong>18.7%</strong
+                                    ><span data-i18n="pkpi.engage"></span>
+                                </div>
+                                <div class="pkpi">
+                                    <strong>×3.2</strong
+                                    ><span data-i18n="pkpi.conv"></span>
+                                </div>
+                            </div>
+                            <div class="project-stack">
+                                <span>TikTok</span><span>Instagram Reels</span
+                                ><span>Meta Ads</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-card-top">
+                                <span
+                                    class="project-tag"
+                                    data-i18n="proj.launch.tag"
+                                ></span>
+                                <span class="project-year">2023</span>
+                            </div>
+                            <h3 data-i18n="proj.launch.title"></h3>
+                            <p data-i18n="proj.launch.desc"></p>
+                            <div class="project-kpis">
+                                <div class="pkpi">
+                                    <strong>85K</strong
+                                    ><span data-i18n="pkpi.followers"></span>
+                                </div>
+                                <div class="pkpi">
+                                    <strong>×2.7</strong
+                                    ><span data-i18n="pkpi.roi"></span>
+                                </div>
+                            </div>
+                            <div class="project-stack">
+                                <span>LinkedIn</span><span>Google Ads</span
+                                ><span>HubSpot</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-card-top">
+                                <span
+                                    class="project-tag"
+                                    data-i18n="proj.collab.tag"
+                                ></span>
+                                <span class="project-year">2023</span>
+                            </div>
+                            <h3 data-i18n="proj.collab.title"></h3>
+                            <p data-i18n="proj.collab.desc"></p>
+                            <div class="project-kpis">
+                                <div class="pkpi">
+                                    <strong>32</strong
+                                    ><span data-i18n="pkpi.influencers"></span>
+                                </div>
+                                <div class="pkpi">
+                                    <strong>+890K</strong
+                                    ><span data-i18n="pkpi.impressions"></span>
+                                </div>
+                            </div>
+                            <div class="project-stack">
+                                <span>YouTube</span><span>Instagram</span
+                                ><span>Influence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ░░░ FORMATION ░░░ -->
+            <section id="edu" class="section education alt-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-num">04</span>
+                        <h2 data-i18n="nav.edu"></h2>
+                    </div>
+                    <div class="edu-grid">
+                        <div class="edu-card">
+                            <div class="edu-icon">🎓</div>
+                            <div class="edu-info">
+                                <h3 data-i18n="edu.master.degree"></h3>
+                                <p data-i18n="edu.master.school"></p>
+                                <span class="edu-year">2019 – 2021</span>
+                            </div>
+                        </div>
+                        <div class="edu-card">
+                            <div class="edu-icon">📱</div>
+                            <div class="edu-info">
+                                <h3 data-i18n="edu.bachelor.degree"></h3>
+                                <p data-i18n="edu.bachelor.school"></p>
+                                <span class="edu-year">2016 – 2019</span>
+                            </div>
+                        </div>
+                        <div class="edu-card">
+                            <div class="edu-icon">🏅</div>
+                            <div class="edu-info">
+                                <h3 data-i18n="edu.bootcamp.degree"></h3>
+                                <p data-i18n="edu.bootcamp.school"></p>
+                                <span class="edu-year">2022</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-block">
+                        <h3 class="cert-title" data-i18n="edu.certTitle"></h3>
+                        <div class="cert-list">
+                            <div class="cert-item">
+                                <span class="cert-badge">Meta</span
+                                ><span data-i18n="cert.meta"></span>
+                            </div>
+                            <div class="cert-item">
+                                <span class="cert-badge">Google</span
+                                ><span data-i18n="cert.google"></span>
+                            </div>
+                            <div class="cert-item">
+                                <span class="cert-badge">HubSpot</span
+                                ><span data-i18n="cert.hubspot"></span>
+                            </div>
+                            <div class="cert-item">
+                                <span class="cert-badge">TikTok</span
+                                ><span data-i18n="cert.tiktok"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ░░░ CONTACT ░░░ -->
+            <section id="contact" class="section contact">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-num">05</span>
+                        <h2 data-i18n="nav.contact"></h2>
+                    </div>
+                    <div class="contact-inner">
+                        <p
+                            class="contact-tagline"
+                            data-i18n="contact.tagline"
+                        ></p>
+
+                        <div class="contact-cards">
+                            <a href="tel:+33612345678" class="contact-card">
+                                <div class="contact-card-icon">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07
+                           A19.5 19.5 0 0 1 4.7 12.1 19.79 19.79 0 0 1 1.58 3.5
+                           A2 2 0 0 1 3.55 1.33h3a2 2 0 0 1 2 1.72
+                           c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11
+                           L7.91 8.89a16 16 0 0 0 6.29 6.29l.89-.89
+                           a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7
+                           A2 2 0 0 1 22 16.92z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="contact-card-text">
+                                    <span
+                                        class="contact-card-label"
+                                        data-i18n="about.phone"
+                                    ></span>
+                                    <p>+33 6 12 34 56 78</p>
+                                </div>
+                            </a>
+
+                            <a
+                                href="mailto:Amina.Bah@agencepulse.fr"
+                                class="contact-card"
+                            >
+                                <div class="contact-card-icon">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <rect
+                                            x="2"
+                                            y="4"
+                                            width="20"
+                                            height="16"
+                                            rx="2"
+                                        />
+                                        <path
+                                            d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="contact-card-text">
+                                    <span class="contact-card-label"
+                                        >Email</span
+                                    >
+                                    <p>Amina.Bah@agencepulse.fr</p>
+                                </div>
+                            </a>
+
+                            <div class="contact-card contact-card--static">
+                                <div class="contact-card-icon">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path
+                                            d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"
+                                        />
+                                        <circle cx="12" cy="10" r="3" />
+                                    </svg>
+                                </div>
+                                <div class="contact-card-text">
+                                    <span
+                                        class="contact-card-label"
+                                        data-i18n="about.location"
+                                    ></span>
+                                    <p data-i18n="contact.location"></p>
+                                </div>
+                            </div>
+
+                            <a
+                                href="https://linkedin.com/in/Amina-Bah"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-card contact-card--linkedin"
+                            >
+                                <div class="contact-card-icon">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2
+                           2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                                        />
+                                        <rect
+                                            x="2"
+                                            y="9"
+                                            width="4"
+                                            height="12"
+                                        />
+                                        <circle cx="4" cy="4" r="2" />
+                                    </svg>
+                                </div>
+                                <div class="contact-card-text">
+                                    <span class="contact-card-label"
+                                        >LinkedIn</span
+                                    >
+                                    <p data-i18n="contact.linkedin"></p>
+                                </div>
+                                <span
+                                    class="contact-card-arrow"
+                                    aria-hidden="true"
+                                    >↗</span
+                                >
+                            </a>
+
+                            <a
+                                href="https://github.com/Amina-Bah"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-card contact-card--github"
+                            >
+                                <div class="contact-card-icon">
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5
+                           .08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5
+                           0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0
+                           C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5
+                           A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5
+                           -.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                                        />
+                                        <path d="M9 18c-4.51 2-5-2-7-2" />
+                                    </svg>
+                                </div>
+                                <div class="contact-card-text">
+                                    <span class="contact-card-label"
+                                        >GitHub</span
+                                    >
+                                    <p data-i18n="contact.github"></p>
+                                </div>
+                                <span
+                                    class="contact-card-arrow"
+                                    aria-hidden="true"
+                                    >↗</span
+                                >
+                            </a>
+                        </div>
+                        <!-- /.contact-cards -->
+                    </div>
+                    <!-- /.contact-inner -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p data-i18n="footer.copy"></p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
