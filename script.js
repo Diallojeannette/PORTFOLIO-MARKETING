@@ -123,7 +123,7 @@ const i18n = {
         "contact.github": "Voir les projets GitHub",
 
         /* Footer */
-        "footer.copy": "© 2025 Amina Bah · Tous droits réservés",
+        "footer.copy": "© 2026 Amina Bah · Tous droits réservés",
     },
 
     /* ══════════════════════════════════
@@ -229,7 +229,7 @@ const i18n = {
         "contact.github": "View GitHub projects",
 
         /* Footer */
-        "footer.copy": "© 2025 Amina Bah · All rights reserved",
+        "footer.copy": "© 2026 Amina Bah · All rights reserved",
     },
 };
 
